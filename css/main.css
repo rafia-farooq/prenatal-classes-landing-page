@@ -136,6 +136,23 @@ h1 {
     font-variant-caps: small-caps;
 }
 
+header {
+    font-size: 80px;
+    padding: 30px;
+    background-color: darkslategray;
+}
+
+h3 {
+    color: floralwhite;
+    font-size: 25px;
+    width: 80%;
+}
+
+footer {
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: darkslategray;
+}
 
 /* ==========================================================================
    Helper classes
