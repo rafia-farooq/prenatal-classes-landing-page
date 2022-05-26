@@ -94,53 +94,79 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+/*---------General styles-----*/
 
 html {
-  background-color: #000;
-  height: 100%;
+    font-size: 16px;
 }
 
+ 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
-}
-
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 24px;
   font-size: 1em;
-  height: 300px;
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  padding: 20px;
-  background-color: darkslateblue;
-  border-right: 1px solid #999;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  margin: 0 auto;
+  background-color: whitesmoke;
 }
 
-h1 {
-    line-height: 40px;
-    font-variant-caps: small-caps;
-}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+
+/*----------hero image------*/
 
 header {
-    font-size: 80px;
-    padding: 30px;
-    background-color: darkslategray;
+    background: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    width: auto;
+    height: 25em;
+    padding: 20px;
+    background-size: cover;
+    border-bottom: 0.5em solid pink;
 }
+
+
+/*--------Flexbox settings-----*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+
+.div-1, .div-2, .div-3 {
+    justify-content: center;
+    align-items: center;
+    line-height: 26px;
+    text-align: center;
+    background-color: pink;
+    width: 100%;
+    padding: 50px 0;
+}
+  
+
+.div-1,
+.div-2 {
+  border-bottom: 0.5px solid rosybrown;
+}
+
+
+/*---------Header styles---------*/
+
+header h1 {
+    font-size: 4em;
+    font-variant-caps: small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
 
 h3 {
     color: floralwhite;
@@ -148,12 +174,134 @@ h3 {
     width: 80%;
 }
 
-footer {
-    font-size: 1.5rem;
-    padding: 20px;
-    background-color: darkslategray;
+.top-section {
+    padding-bottom: 30px;
+ }
+
+ 
+.intro {
+    padding: 10px 0;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.intro h1 {
+    text-align: center;
+    color: pink;
+}
+
+.intro h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-variant: small-caps;
+    width: 30%;
+    margin: 10px;
+    height: 100px;
+    border: 1px solid grey;
+}
+
+.intro p {
+    font-size: 1.1em;
+    text-align: justify;
+    padding-top: 50px;
+    line-height: 2.78em;
+    margin: 10px 15px 0 15px;
+  
+        
+}
+
+.intro i {
+    padding-right: 5px;
+    color: pink;
+}
+
+
+.tagline {
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 6em 0;
+    width: 85%;
+
+}
+
+
+
+/*-----------Footer styles-------*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: pink;
+    text-align: center;
+}
+
+.contact h4 {
+    font-style: normal
+}
+footer p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+  
+footer .content-wrapper {
+    width: 90%;
+    margin: 10px 0;
+  }
+  
+footer .contact {
+    margin-bottom: 50px;
+  }
+  
+footer .social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  footer .social-icons p {
+    background-color:whitesmoke;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .social-icons p i {
+    font-size: 1.3em;
+    color: hotpink;
+  }
+  
+  footer .copyright {
+    margin: 20px 0;
+  }
+  
+  .copyright p {
+    text-align: center;
+    font-size: 0.5em;
+    line-height: 2em;
+    color: grey;
+  }
+
+  /*--------Mobile styles------*/
+
+  
+
+
+
+  
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -234,11 +382,243 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
+   @media only screen and (min-width:768px) {
+    /*Tablet styles here*/
+  
+    /* General styles */
+
+    .content-wrapper {
+      max-width: 800px;
+      margin: 100px 0;
+    }  
+
+    body {
+      font-size: 1.3em;
+    }
+
+    /*-----header styles-----*/
+    
+   
+    header h1 {
+      font-size: 5.3em;
+    }
+
+    /*------three divs-------*/
+    .wrapper {
+      background-color: pink;
+      border-radius: 20px;
+      padding: 75px 0;
+    }
+    .div-1,
+    .div-2,
+    .div-3 {
+      background-color: white;
+      color: pink;
+      width: 30%;
+      box-sizing: border-box;
+      border: 2px solid rosybrown;
+      border-radius: 40px;
+      margin: 10px;
+      padding: 20px 20px;
+      text-align: left;
+    }
+
+    .wrapper h1 {
+      width: 40%;
+      line-height: 1em; 
+      margin: 0; 
+      
+    }
+
+    .wrapper li {
+        line-height: 1.5em;
+        list-style-type: disc;
+        font-size: 0.9em;
+    }
+
+    .wrapper ul {
+      border-top: 1px solid grey;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    /*-------tagline ------*/
+    .tagline {
+      padding: 3em 0;
+      width: 90%;
+      font-size: 1em;
+  }
+
+
+      
+      /* Footer */
+      footer .content-wrapper {
+        width: 90%;
+        margin: 0;
+      }
+    
+      footer .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        padding: 20px 0;
+      }
+    
+      footer .contact {
+        margin: 0;
+      }
+    
+      footer h4 {
+        font-size: 1em;
+        margin: 10px;
+      }
+    
+      footer p {
+          line-height: 1.285;
+      }
+    
+      footer .social-icons {
+       flex-direction: column;    
+      }
+      
+      .social-icons p {
+        margin: 5px;
+      }
+      footer .copyright {
+        width: 100%;        
+      }
+    
+
+    
+
+  }
+
+
+@media only screen and (min-width:1200px) {
+    /*Desktop styles here*/
+
+    main {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .intro p {
+      font-size: 1.6em;
+    }
+
+    .into h1 {
+      font-size: 3.5em;
+    }
+    .intro h2 {
+      font-size: 2em;
+    }
+
+    .wrapper {
+      padding: 100px;
+    }
+
+    .wrapper h1 {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    
+    .wrapper ul {
+      padding: 30px 0;
+    }
+
+    .wrapper li {
+      list-style-type: none;
+      padding: 8px 0;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 50px;
+      border-top: 1px dashed rosybrown
+    }
+
+    .wrapper li:first-child {
+      border: none
+    }
+
+
+    .tagline {
+      font-size: 1.3em;
+      letter-spacing: 4px;
+    }
+     
+
+
+    
+
+
+
+
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+
+    @media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
 }
 
 /* ==========================================================================
